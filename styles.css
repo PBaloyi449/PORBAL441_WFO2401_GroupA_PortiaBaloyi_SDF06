@@ -1,0 +1,215 @@
+/* Base Styles */
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+/* Set a fixed height and width for all images */
+img {
+    display: block;
+    height: 500px;
+    width: 500px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+}
+
+/* Styles for the profile image */
+.profile-image{
+    margin-bottom: 5px;
+}
+
+/* Animation for profile image for when the user clicks the image */
+.profile-image:focus,
+.profile-image:active{
+    animation: rotate 5s linear infinite;
+}
+
+/* Styles for the profile user name */
+.profile-user-name {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Styles for the profile statistics */
+.profile-stats ul {
+    list-style: none;
+    display: flex; /* Use flexbox to place items in a row */
+    justify-content: space-between; /* Distribute items along the row, adding space between them */
+    padding: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Styles for profile stat items */
+.profile-stats li {
+    margin-right: 20px; 
+}
+
+/* Styles for the user settings section */
+.profile-user-settings {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+/* Styles for the profile user name */
+.profile-user-name {
+    margin-top: 5px;
+    margin-right: 10px; /* Add spacing between username and buttons */
+    font-size: 3em;
+}
+
+/* Styles for the profile bio section */
+.profile-bio{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Style for the buttons */
+.btn {
+    outline: none; /* Remove default focus outline */
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #8a2be2; /* Purple background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Styles for when the user clicks the buttons */
+.btn:focus,
+.btn:active {
+    outline: 2px solid #8a2be2; /* Purple outline */
+}
+
+/* Styles for the profile settings button */
+.profile-settings-btn {
+    border: none;
+    background: none;
+    margin-left: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px; 
+}
+
+ /* Styles for each gallery item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styles for gallery images */
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Styles for information on gallery items */
+.gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    text-align: center;
+}
+
+/* Hover effect for gallery item images */
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+/* Hide information on gallery item when user hovers over the image */
+.gallery-item:hover .gallery-item-info
+ {
+    display: none; /* Hide the info on hover */
+}
+
+/* Styles for individual items within the gallery item info */
+.gallery-item-info li {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Styles for likes in gallery items */
+.gallery-item-likes { 
+    color: red;
+}
+
+/* Styles for comments in gallery items */
+.gallery-item-comments {
+    margin-left: 20px;
+    color: blue;   
+}
+
+/* Hover effect for the entire gallery item */
+.gallery-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow on hover */
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+/* Focus effect for gallery images */
+.gallery-item:focus .gallery-image {
+    outline: 2px solid #8a2be2; /* Purple outline on focus */
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5); /* Purple shadow on focus */
+}
+
+/* Loader Animation */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; 
+}
+
+/* Keyframes for the loader spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Keyframes for the profile image rotate animation */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+    
